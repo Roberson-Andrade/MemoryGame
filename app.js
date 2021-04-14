@@ -67,7 +67,6 @@ function cardsGame(arrayCard, gameMode) {
                         card.classList.add('flip')
                     }
                 }
-        
                 if(firstId == undefined) {
                     firstId = x.id
                     firstP = x.p

@@ -1,7 +1,8 @@
 let cardsMedium = [{color: '#001f3f', id: 1, p: 1}, {color: '#001f3f', id: 1, p: 2}, { color: '#0074D9',id: 2, p: 3}, {color: '#0074D9', id: 2, p: 4}, { color: '#3D9970', id: 3, p: 5}, { color: '#3D9970', id: 3, p: 6}, { color: '#FFDC00', id: 4, p: 7}, {color: '#FFDC00', id: 4, p: 8}, {color: '#FF851B', id: 5, p: 9}, {color:'#FF851B', id: 5, p: 10}, {color: '#F012BE', id: 6, p: 11}, {color: '#F012BE',id: 6, p: 12}, {color: '#111111',id: 7, p: 13}, {color: '#111111', id: 7, p: 14}, {color: '#DDDDDD', id: 8, p: 15}, {color: '#DDDDDD',id: 8, p: 16}]
   
+let gameMode = 0 
 
-function cardsGame(arrayCard, n) {
+function cardsGame(arrayCard, gameMode) {
     let gameBoard = document.createElement('div')
     gameBoard.setAttribute('id', 'game-board')
     gameBoard.style.animation = 'gameBoardAnimation 2s'
@@ -46,7 +47,7 @@ function cardsGame(arrayCard, n) {
         backCard.className = 'theback'
         backCard.style.background = x.color
 
-        if(n ==='1'){
+        if(gameMode ==='1'){
             card.classList.add('flip')
             setTimeout(easyMode, 2000)
 
@@ -204,8 +205,10 @@ function createMenu() {
     btnStart.onclick = function() {
         if(btnEasy.classList.contains('btnActive')) {
             startGame(btnEasy.value)
+            gameMode = btnEasy.value
         } else {
             startGame(btnMedium.value)
+            gameMode = btnMedium.value
         }
         setTimeout(removeMenu, 2000)
         menu.style.animation = 'menuAnimation 2s'
@@ -254,7 +257,7 @@ function createModal(time) {
         modalBg.remove()
         gameBoard.remove()
         timer.remove()
-        startGame('1')
+        startGame(gameMode)
     }
 }
     

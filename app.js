@@ -59,8 +59,6 @@ function cardsGame(arrayCard, n) {
         function clickCard() {
             cardContainer.addEventListener("click", function selectCard() {
                 
-                //Primeiro click colocar o id em First position e não colocar no second position
-                //Segundo click colocar o id em second position e (não colocar no firstpositon) comparar os dois
                 if(firstId !== undefined && secondId == undefined) {
                     secondP = x.p
                     if(firstP !== secondP){

@@ -234,6 +234,7 @@ function createModal(time) {
     modal.classList.add('modalBox')
     btnMenu.classList.add('btn')
     btnPlayAgain.classList.add('btn')
+    btnDiv.classList.add('divBtn')
 
     modal.innerHTML = '<h1>You Finished it!!!</h1>' + '<h2> Your '+ time + '</h2>' 
     btnMenu.innerHTML = 'Menu'

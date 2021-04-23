@@ -104,7 +104,7 @@ function cardsGame(arrayCard, gameMode) {
         
     }
 
-    let pair = function madePair() {
+    let pair = function makePair() {
         let cards = document.getElementsByClassName('card')
         let trueOrFalse = []
     

@@ -39,6 +39,19 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-height:750px) {
+    .timer h1 {
+        margin-top: 40px !important; 
+    }
+}
+
+@media screen and (max-height:650px) {
+    .timer h1 {
+        margin-top: 20px !important; 
+    }
+}
+
 body {
     box-sizing: border-box;
     background-image: url('./img/background.png');
@@ -124,10 +137,10 @@ h1, h2{
 .timer{
     position: absolute;
     width: 300px;
-    height: 100px;
+    height: 15%;
     background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     border-radius: 0 100% 0 0;
-    top: 89.3%;
+    top: 85%;
     left:0;
     animation: timerAnimation 2s;
     text-indent: 5%;
@@ -136,7 +149,7 @@ h1, h2{
 
 .timer h1 {
     font-size: 3em;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .divBtn {
